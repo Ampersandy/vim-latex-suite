@@ -474,20 +474,20 @@ endfunction
 " etc.
 
 " jumping forward and back in insert mode.
-imap <silent> <Plug>IMAP_JumpForward    <c-r>=IMAP_Jumpfunc('',0)<CR>
-imap <silent> <Plug>IMAP_JumpBack       <c-r>=IMAP_Jumpfunc('b',0)<CR>
+"imap <silent> <Plug>IMAP_JumpForward    <c-r>=IMAP_Jumpfunc('',0)<CR>
+"imap <silent> <Plug>IMAP_JumpBack       <c-r>=IMAP_Jumpfunc('b',0)<CR>
 
-" jumping in normal mode
-nmap <silent> <Plug>IMAP_JumpForward        i<c-r>=IMAP_Jumpfunc('',0)<CR>
-nmap <silent> <Plug>IMAP_JumpBack           i<c-r>=IMAP_Jumpfunc('b',0)<CR>
+"" jumping in normal mode
+"nmap <silent> <Plug>IMAP_JumpForward        i<c-r>=IMAP_Jumpfunc('',0)<CR>
+"nmap <silent> <Plug>IMAP_JumpBack           i<c-r>=IMAP_Jumpfunc('b',0)<CR>
 
-" deleting the present selection and then jumping forward.
-vmap <silent> <Plug>IMAP_DeleteAndJumpForward       "_<Del>i<c-r>=IMAP_Jumpfunc('',0)<CR>
-vmap <silent> <Plug>IMAP_DeleteAndJumpBack          "_<Del>i<c-r>=IMAP_Jumpfunc('b',0)<CR>
+"" deleting the present selection and then jumping forward.
+"vmap <silent> <Plug>IMAP_DeleteAndJumpForward       "_<Del>i<c-r>=IMAP_Jumpfunc('',0)<CR>
+"vmap <silent> <Plug>IMAP_DeleteAndJumpBack          "_<Del>i<c-r>=IMAP_Jumpfunc('b',0)<CR>
 
-" jumping forward without deleting present selection.
-vmap <silent> <Plug>IMAP_JumpForward       <C-\><C-N>i<c-r>=IMAP_Jumpfunc('',0)<CR>
-vmap <silent> <Plug>IMAP_JumpBack          <C-\><C-N>`<i<c-r>=IMAP_Jumpfunc('b',0)<CR>
+"" jumping forward without deleting present selection.
+"vmap <silent> <Plug>IMAP_JumpForward       <C-\><C-N>i<c-r>=IMAP_Jumpfunc('',0)<CR>
+"vmap <silent> <Plug>IMAP_JumpBack          <C-\><C-N>`<i<c-r>=IMAP_Jumpfunc('b',0)<CR>
 
 " }}}
 " Default maps for IMAP_Jumpfunc {{{
@@ -495,24 +495,24 @@ vmap <silent> <Plug>IMAP_JumpBack          <C-\><C-N>`<i<c-r>=IMAP_Jumpfunc('b',
 " NOTE: Default mappings for jumping to the previous placeholder are not
 "       provided. It is assumed that if the user will create such mappings
 "       hself if e so desires.
-if !hasmapto('<Plug>IMAP_JumpForward', 'i')
-    imap <C-J> <Plug>IMAP_JumpForward
-endif
-if !hasmapto('<Plug>IMAP_JumpForward', 'n')
-    nmap <C-J> <Plug>IMAP_JumpForward
-endif
-if exists('g:Imap_StickyPlaceHolders') && g:Imap_StickyPlaceHolders
-	if !hasmapto('<Plug>IMAP_JumpForward', 'v')
-		vmap <C-J> <Plug>IMAP_JumpForward
-	endif
-else
-	if !hasmapto('<Plug>IMAP_DeleteAndJumpForward', 'v')
-		vmap <C-J> <Plug>IMAP_DeleteAndJumpForward
-	endif
-endif
-" }}}
+"if !hasmapto('<Plug>IMAP_JumpForward', 'i')
+    "imap <C-J> <Plug>IMAP_JumpForward
+"endif
+"if !hasmapto('<Plug>IMAP_JumpForward', 'n')
+    "nmap <C-J> <Plug>IMAP_JumpForward
+"endif
+"if exists('g:Imap_StickyPlaceHolders') && g:Imap_StickyPlaceHolders
+	"if !hasmapto('<Plug>IMAP_JumpForward', 'v')
+		"vmap <C-J> <Plug>IMAP_JumpForward
+	"endif
+"else
+	"if !hasmapto('<Plug>IMAP_DeleteAndJumpForward', 'v')
+		"vmap <C-J> <Plug>IMAP_DeleteAndJumpForward
+	"endif
+"endif
+"" }}}
 
-nmap <silent> <script> <plug><+SelectRegion+> `<v`>
+"nmap <silent> <script> <plug><+SelectRegion+> `<v`>
 
 " ============================================================================== 
 " enclosing selected region.
