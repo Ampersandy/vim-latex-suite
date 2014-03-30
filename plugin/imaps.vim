@@ -11,6 +11,9 @@
 " Documentation: {{{
 "
 " Motivation:
+" Why on earth does this create normal mode mappings????
+"
+"
 " this script provides a way to generate insert mode mappings which do not
 " suffer from some of the problem of mappings and abbreviations while allowing
 " cursor placement after the expansion. It can alternatively be thought of as
